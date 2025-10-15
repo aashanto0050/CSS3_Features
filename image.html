@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>images</title>
+    <style>
+        body {
+            margin-top: 150px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+        }
+        
+        .container {
+            display: flex;
+            gap: 10px;
+            width: 400px;
+            padding: 10px;
+            border: 2px solid gray;
+            overflow-x: scroll;
+        }
+        .container img{
+            width: 100%;
+            object-fit: cover;
+            position: sticky;
+            left: 0;
+        }
+
+        img {
+            width: 300px;
+            margin: 20px;
+            border: 2px solid steelblue;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <img src="images/holiday_opt.png" alt="">
+    <div class="container">
+        <img src="images/1442.jpg" alt="">
+        <img src="images/1500.jpg" alt="">
+        <img src="images/1538.jpg" alt="">
+        <img src="images/1586.jpg" alt="">
+        <img src="images/1673.jpg" alt="">
+    </div>
+
 </body>
+
 </html>
