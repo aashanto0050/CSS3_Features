@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket transition and transform</title>
     <style>
-        .field{
+        .field {
             border: 1px solid steelblue;
         }
-        .bat{
+
+        .bat {
             transition: transform 0.1s ease-in;
         }
-        .field:hover .bat{
+
+        .field:hover .bat {
             transform: rotate(-60deg);
             transform-origin: top right;
         }
-        .field:hover .ball{
-            transform: translate(1000px,-500px) scale(0.5);
+
+        .field:hover .ball {
+            transform: translate(1000px, -500px) scale(0.5);
         }
-        .ball{
+
+        .ball {
             width: 50px;
             height: 50px;
             background-color: red;
@@ -28,12 +33,33 @@
             transition: transform 1s ease-out 0.2s;
             /* margin-left: 500px; */
         }
+
+        @media screen and (max-width: 700px) {
+            .field {
+                border: 1px solid steelblue;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .bat {
+                width: 100px;
+            }
+
+            .ball {
+                width: 30px;
+                height: 30px;
+                left: 100px;
+            }
+
+        }
     </style>
 </head>
+
 <body>
     <div class="field">
         <img class="bat" src="images/bat.png" alt="">
         <div class="ball"></div>
     </div>
 </body>
+
 </html>
